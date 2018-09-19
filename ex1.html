@@ -2,14 +2,14 @@
 <html>
 <body>
 
-<textarea id="inputTextArea">
-At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. 
-</textarea>
-<button type="button" onclick="updateTextArea()">Update</button>
+<textarea id="comment_input"></textarea>
+<button type="button" onclick="update()">Update</button>
 <script>
-	function updateTextArea() {
-		document.getElementById("inputTextArea").value = "blah";
+	function update() {
+		var comment = document.getElementById("comment_input").value;
+		document.getElementById("comment").innerHTML = comment
 	}
 </script>
+<p id="comment"></p>
 </body>
 </html>
