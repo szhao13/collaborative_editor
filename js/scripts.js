@@ -1,32 +1,62 @@
-/**
-* Returns the difference between two strings using the longest common 
-* subsequence algorithm. 
-*
-* @param stringX
-* @param stringY
-* @return 		 the same, added, and deleted characters 
-*/
+
 
 $(document).ready(function() {
-	var old_text = $("#old_text").text();
-	console.log("old text is " + old_text);
+	// var old_text = $("#output").text();
+	var old_input = "";
 	$("#update").click(function() {
-		var output = "";
 		// diff(old_text, $("#input").text());
-		var diff_result = diff(old_text, $("#input").val());
+		// console.log("old text is " + old_input);
+		var new_input = $("#input").val();
 
+		// get difference between old and new input
+		var diff_result = diff(old_input, new_input);
+
+		// empty previous output
+		$("#output").empty();
+
+		// build new output by adding each char as a new span element of
+		// the appropriate class (added, same, deleted)
 		$.each(diff_result, function(index, value) {
-			// if (value[0] === "+") {
-			// 	output 
-			// }
+			var add_char = ""
+			if (value[0] === "+") {
+				add_char = "<span class=\"added\">" + value[1] + "</span>";
+				$("#output").append(add_char);
+			}
+			else if (value[0] === " ") {
+				add_char = "<span class=\"same\">" + value[1] + "</span>";
+				$("#output").append(add_char);
+			}
+			else if (value[0] === '-') {
+				add_char =  "<span class=\"deleted\">" + value[1] + "</span>";
+				$("#output").append(add_char);
+			}
 		});
-		$("#old_text").text($("#input").val());
+		// $("#old_text").text($("#input").val());
 
-		old_text = $("#old_text").text();
+		old_input = new_input;
 
 	});
 });
 
+/**
+* Returns the difference between two strings using the longest common 
+* subsequence algorithm. 
+*
+*
+* @param stringX
+* @param stringY
+* @return 		 same, added and deleted characters in order of appearance
+*
+* Note: returns an array of strings where the second char is the diff'ed char
+* and the first char is '+', '-', or ' ' to indicate whether the second
+* char is added, deleted and same character, respectively.
+* 
+* Ex: 
+* console.log(diff("XMJYAUZ", "MZJAWXU"))
+* // Prints ["-X", " M", "+Z", " J", "-Y", " A", "+W", "+X", " U", "-Z"]		
+**/
+
+// outputs an array of strings, where the first char in the string is eit
 function diff(stringX, stringY) {
 	var x = stringX.split('');
 	var y = stringY.split('');
