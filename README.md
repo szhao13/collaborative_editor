@@ -4,7 +4,7 @@ An in-browser diff tool. Gives the difference between the last inputted string a
 
 ## Getting Started
 
-Download the project file and open index.html in browser to use. 
+Download the repositiory and open index.html in browser to use. 
 
 
 ## Acknowledgments
