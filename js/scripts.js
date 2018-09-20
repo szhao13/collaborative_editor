@@ -3,9 +3,9 @@
 $(document).ready(function() {
 	// var old_text = $("#output").text();
 	var old_input = "";
+
+	// update on button click
 	$("#update").click(function() {
-		// diff(old_text, $("#input").text());
-		// console.log("old text is " + old_input);
 		var new_input = $("#input").val();
 
 		// get difference between old and new input
@@ -31,7 +31,6 @@ $(document).ready(function() {
 				$("#output").append(add_char);
 			}
 		});
-		// $("#old_text").text($("#input").val());
 
 		old_input = new_input;
 

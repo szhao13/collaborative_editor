@@ -1,15 +1,17 @@
+* {
+	font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+}
+
 span.added {
-	display: inline;
-	color: blue;
+	color: #7AB9D9;
+	background-color: #D1FAFF;
 }
 
 span.same {
-	display: inline;
-	color: green;
+	color: #4E4E4E;
 }
 
 span.deleted {
-	display: inline;
-	color: red;
+	color: #C1C1C1;
 	text-decoration: line-through;
 }
