@@ -4,7 +4,6 @@ $(document).ready(function() {
 	// var ot = require('ot');
 	var old_input = "";
 	var operation = new ot.TextOperation();
-
 	// update on button click
 	$("#update").click(function() {
 		var new_input_1 = $("#input_1").val();
@@ -39,11 +38,11 @@ $(document).ready(function() {
 	});
 });
 
-function dynamicallyLoadScript(url) {
-    var script = document.createElement("script"); //Make a script DOM node
-    script.src = url; //Set it's src to the provided URL
-    document.head.appendChild(script); //Add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
-}
+// function dynamicallyLoadScript(url) {
+//     var script = document.createElement("script"); //Make a script DOM node
+//     script.src = url; //Set it's src to the provided URL
+//     document.head.appendChild(script); //Add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
+// }
 /**
 * Returns the difference between two strings using the longest common 
 * subsequence algorithm. 
