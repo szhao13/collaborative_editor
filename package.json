@@ -1,0 +1,32 @@
+{
+  "name": "notion_interview",
+  "version": "1.0.0",
+  "description": "A collaborative in browser editor",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "http": "^0.0.0",
+    "sharedb": "^0.11.37",
+    "uniq": "^1.0.1",
+    "websocket-json-stream": "^0.0.3",
+    "ws": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szhao13/notion_interview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szhao13/notion_interview/issues"
+  },
+  "homepage": "https://github.com/szhao13/notion_interview#readme"
+}

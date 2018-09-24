@@ -1,9 +1,10 @@
 
+var sharedb = require('sharedb/lib/client');
+var StringBinding = require('sharedb-string-binding');
 
 $(document).ready(function() {
 	// var ot = require('ot');
 	var old_input = "";
-	var operation = new ot.TextOperation();
 	// update on button click
 	$("#update").click(function() {
 		var new_input_1 = $("#input_1").val();
@@ -18,6 +19,7 @@ $(document).ready(function() {
 		// build new output by adding each char as a new span element of
 		// the appropriate class (added, same, deleted)
 		$.each(diff_result, function(index, value) {
+			var jsonDiff = {}
 			var add_char = ""
 			if (value[0] === "+") {
 				add_char = "<span class=\"added\">" + value[1] + "</span>";
