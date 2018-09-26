@@ -9,8 +9,8 @@
   "dependencies": {
     "express": "^4.16.3",
     "http": "^0.0.0",
+    "ot": "0.0.15",
     "sharedb": "^0.11.37",
-    "uniq": "^1.0.1",
     "websocket-json-stream": "^0.0.3",
     "ws": "^6.0.0"
   },
