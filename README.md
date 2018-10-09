@@ -1,7 +1,6 @@
-# notion_interview
+# collaborative_editor
 
-An in-browser diff tool. Gives the difference between the last inputted string and the current inputted string by user and
-resolves conflicts between each user. Currently displays each user's contributions on two different lines.
+An in-browser collaborative editor. Gives the difference between the last inputted string and the current inputted string by user and resolves conflicts between each user. Currently displays each user's contributions on two different lines.
 
 ## Getting Started
 
